@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "style": "sass --watch styles.scss styles.css"
+  },
+  "author": "clark chan",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.68.0"
+  }
+}
