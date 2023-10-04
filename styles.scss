@@ -28,15 +28,37 @@ body {
       margin-bottom: 0px;
     }
     .underline {
-      width: 100%;
-      height: 10px;
-      background-color: hotpink;
-      display: none;
-      animation: underline-show 7s 1;
+      width: 0%;
+      position: relative;
+      background-color: white;
+      left: 50%;
+      animation: underline-show 1s linear forwards;
+      animation-delay: 6s;
+      border-radius: 2px;
     }
   }
   .skills-container {
     flex: 1;
+  }
+  .laptop-pic {
+    flex: 2;
+
+    background: hotpink;
+    .screen {
+      margin-left: 3rem;
+      width: 22rem;
+      height: 15rem;
+      background: black;
+      border-radius: 6px;
+    }
+    .keyboard {
+      width: 22rem;
+      height: 0;
+      background: hotpink;
+      border-left: 3rem solid transparent;
+      border-right: 3rem solid transparent;
+      border-bottom: 8rem solid silver;
+    }
   }
 }
 
@@ -71,36 +93,69 @@ body {
 
 @keyframes underline-show {
   0% {
+    left: 50%;
+    width: 0%;
+  }
+  100% {
+    left: 0%;
+    width: 100%;
   }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
   .title {
     font-size: 50px;
+  }
+  .underline {
+    height: 4px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  html {
+    font-size: 12px;
+  }
   .title {
     font-size: 75px;
+  }
+  .underline {
+    height: 6px;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
   .title {
     font-size: 100px;
+  }
+  .underline {
+    height: 8px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
   .title {
     font-size: 125px;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
   .title {
     font-size: 125px;
+  }
+  .underline {
+    height: 10px;
   }
 }
