@@ -7,19 +7,36 @@ body {
 .section {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .intro {
   font-family: Arial, Helvetica, sans-serif;
   background: black;
   animation: bg-change 5s 1;
+  .title-container {
+    .title {
+      flex: 1;
+      color: white;
+      text-transform: uppercase;
 
-  p {
-    color: white;
-    text-transform: uppercase;
-    font-size: 8vw;
-    animation: title-change 7s 1;
+      text-shadow: 0.1vw 0vw 0.15vw white;
+      animation: title-change 7s 1;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+    .underline {
+      width: 100%;
+      height: 10px;
+      background-color: hotpink;
+      display: none;
+      animation: underline-show 7s 1;
+    }
+  }
+  .skills-container {
+    flex: 1;
   }
 }
 
@@ -49,5 +66,41 @@ body {
   98%,
   100% {
     color: white;
+  }
+}
+
+@keyframes underline-show {
+  0% {
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 50px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .title {
+    font-size: 75px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 100px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 125px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 125px;
   }
 }
