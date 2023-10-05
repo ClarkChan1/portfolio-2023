@@ -49,6 +49,103 @@ body {
       height: 15rem;
       background: rgb(55, 55, 55);
       border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content {
+        height: 12rem;
+        width: 20rem;
+        background: #202020;
+        display: flex;
+        flex-direction: column;
+        .navbar {
+          height: 1rem;
+          width: 100%;
+          background: rgb(75, 75, 75);
+          display: flex;
+          align-items: center;
+          .red-button,
+          .yellow-button,
+          .green-button {
+            height: 0.6rem;
+            width: 0.6rem;
+            border-radius: 50%;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+          }
+          .red-button {
+            background: #ff5f57;
+            margin-left: 0.5rem;
+          }
+          .yellow-button {
+            background: #febc2e;
+          }
+          .green-button {
+            background: #28c840;
+          }
+        }
+        .main-container {
+          height: 100%;
+          display: flex;
+          gap: 0.5rem;
+          background: rgb(75, 75, 75);
+          .code-files {
+            flex: 1;
+            background: #202020;
+          }
+          .code-container {
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background: #202020;
+            padding: 0.5rem;
+            .line {
+              display: flex;
+              gap: 0.6rem;
+              .indent {
+                width: 1rem;
+              }
+              .bar {
+                height: 0.5rem;
+                width: 5rem;
+                border-radius: 2px;
+              }
+              .short {
+                width: 2rem;
+              }
+              .long {
+                width: 8rem;
+              }
+              .yellow {
+                background: #ebc601;
+              }
+
+              .purple {
+                background: #be82b9;
+              }
+              .dark-blue {
+                background: #5190c4;
+              }
+              .blue {
+                background: #4ebcf9;
+              }
+              .light-blue {
+                background: #97d5f6;
+              }
+              .green {
+                background: #4cc1aa;
+              }
+              .tan {
+                background: #dbdba9;
+              }
+              .brown {
+                background: #c88d75;
+              }
+            }
+          }
+        }
+      }
     }
     .motherboard {
       width: 22rem;
