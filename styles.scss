@@ -17,11 +17,13 @@ body {
   background: black;
   animation: bg-change 5s 1;
   .title-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
     .title {
-      flex: 1;
-      color: white;
       text-transform: uppercase;
-
       text-shadow: 0.1vw 0vw 0.15vw white;
       animation: title-change 7s 1;
       margin-top: 20px;
@@ -35,6 +37,13 @@ body {
       animation: underline-show 1s ease-out forwards;
       animation-delay: 6s;
       border-radius: 2px;
+    }
+    .job {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      letter-spacing: 0.25rem;
+      opacity: 0;
+      animation: show-job 1s ease-out 6s forwards;
     }
   }
   .skills-container {
@@ -58,6 +67,20 @@ body {
         background: #202020;
         display: flex;
         flex-direction: column;
+        position: relative;
+        .black-screen {
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          background: black;
+          opacity: 1;
+          z-index: 1;
+          animation: turn-on-laptop 1s ease-out 1;
+          animation-delay: 6s;
+          animation-fill-mode: forwards;
+        }
         .navbar {
           height: 1rem;
           width: 100%;
@@ -110,6 +133,7 @@ body {
             gap: 0.5rem;
             background: #202020;
             padding: 0.5rem;
+
             .line {
               display: flex;
               gap: 0.6rem;
@@ -252,6 +276,15 @@ body {
   }
 }
 
+@keyframes show-job {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes move-code {
   0%,
   100% {
@@ -259,6 +292,15 @@ body {
   }
   50% {
     transform: scaleX(0.5);
+  }
+}
+
+@keyframes turn-on-laptop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

@@ -17,9 +17,14 @@ body {
   background: black;
   animation: bg-change 5s 1;
 }
-.intro .title-container .title {
+.intro .title-container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
+}
+.intro .title-container .title {
   text-transform: uppercase;
   text-shadow: 0.1vw 0vw 0.15vw white;
   animation: title-change 7s 1;
@@ -34,6 +39,13 @@ body {
   animation: underline-show 1s ease-out forwards;
   animation-delay: 6s;
   border-radius: 2px;
+}
+.intro .title-container .job {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  opacity: 0;
+  animation: show-job 1s ease-out 6s forwards;
 }
 .intro .skills-container {
   flex: 1;
@@ -57,6 +69,20 @@ body {
   background: #202020;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.intro .laptop-pic .screen .content .black-screen {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: black;
+  opacity: 1;
+  z-index: 1;
+  animation: turn-on-laptop 1s ease-out 1;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
 }
 .intro .laptop-pic .screen .content .navbar {
   height: 1rem;
@@ -236,12 +262,28 @@ body {
     width: 100%;
   }
 }
+@keyframes show-job {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes move-code {
   0%, 100% {
     transform: scaleX(1);
   }
   50% {
     transform: scaleX(0.5);
+  }
+}
+@keyframes turn-on-laptop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /* Extra small devices (phones, 600px and down) */
