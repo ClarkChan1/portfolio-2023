@@ -32,7 +32,7 @@ body {
       position: relative;
       background-color: white;
       left: 50%;
-      animation: underline-show 1s linear forwards;
+      animation: underline-show 1s ease-out forwards;
       animation-delay: 6s;
       border-radius: 2px;
     }
@@ -92,6 +92,16 @@ body {
           .code-files {
             flex: 1;
             background: #202020;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            .line {
+              height: 0.5rem;
+              width: 2rem;
+              border-radius: 3px;
+              background: #c3c3c3;
+            }
           }
           .code-container {
             flex: 4;
@@ -109,7 +119,19 @@ body {
               .bar {
                 height: 0.5rem;
                 width: 5rem;
-                border-radius: 2px;
+                border-radius: 3px;
+              }
+              .moving {
+                transform-origin: left;
+                animation: move-code 3s linear infinite;
+              }
+              .moving-slow {
+                transform-origin: left;
+                animation: move-code 5s linear infinite;
+              }
+              .moving-fast {
+                transform-origin: left;
+                animation: move-code 2s linear infinite;
               }
               .short {
                 width: 2rem;
@@ -227,6 +249,16 @@ body {
   100% {
     left: 0%;
     width: 100%;
+  }
+}
+
+@keyframes move-code {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.5);
   }
 }
 

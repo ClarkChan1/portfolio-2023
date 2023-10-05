@@ -31,7 +31,7 @@ body {
   position: relative;
   background-color: white;
   left: 50%;
-  animation: underline-show 1s linear forwards;
+  animation: underline-show 1s ease-out forwards;
   animation-delay: 6s;
   border-radius: 2px;
 }
@@ -93,6 +93,16 @@ body {
 .intro .laptop-pic .screen .content .main-container .code-files {
   flex: 1;
   background: #202020;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.intro .laptop-pic .screen .content .main-container .code-files .line {
+  height: 0.5rem;
+  width: 2rem;
+  border-radius: 3px;
+  background: #c3c3c3;
 }
 .intro .laptop-pic .screen .content .main-container .code-container {
   flex: 4;
@@ -112,7 +122,19 @@ body {
 .intro .laptop-pic .screen .content .main-container .code-container .line .bar {
   height: 0.5rem;
   width: 5rem;
-  border-radius: 2px;
+  border-radius: 3px;
+}
+.intro .laptop-pic .screen .content .main-container .code-container .line .moving {
+  transform-origin: left;
+  animation: move-code 3s linear infinite;
+}
+.intro .laptop-pic .screen .content .main-container .code-container .line .moving-slow {
+  transform-origin: left;
+  animation: move-code 5s linear infinite;
+}
+.intro .laptop-pic .screen .content .main-container .code-container .line .moving-fast {
+  transform-origin: left;
+  animation: move-code 2s linear infinite;
 }
 .intro .laptop-pic .screen .content .main-container .code-container .line .short {
   width: 2rem;
@@ -212,6 +234,14 @@ body {
   100% {
     left: 0%;
     width: 100%;
+  }
+}
+@keyframes move-code {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.5);
   }
 }
 /* Extra small devices (phones, 600px and down) */
