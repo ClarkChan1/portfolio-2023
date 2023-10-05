@@ -8,8 +8,9 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //   justify-content: center;
   align-items: center;
+  //   gap: 3rem;
 }
 
 .intro {
@@ -70,7 +71,6 @@ body {
   }
   .laptop-pic {
     flex: 2;
-
     .screen {
       margin-left: 3rem;
       width: 22rem;
@@ -386,6 +386,6 @@ body {
     font-size: 125px;
   }
   .underline {
-    height: 10px;
+    height: 8px;
   }
 }
