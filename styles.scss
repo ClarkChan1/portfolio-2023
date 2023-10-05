@@ -43,21 +43,52 @@ body {
   .laptop-pic {
     flex: 2;
 
-    background: hotpink;
     .screen {
       margin-left: 3rem;
       width: 22rem;
       height: 15rem;
-      background: black;
+      background: rgb(55, 55, 55);
       border-radius: 6px;
     }
-    .keyboard {
+    .motherboard {
       width: 22rem;
       height: 0;
-      background: hotpink;
       border-left: 3rem solid transparent;
       border-right: 3rem solid transparent;
       border-bottom: 8rem solid silver;
+      .keys {
+        left: 0rem;
+        top: 1rem;
+        position: relative;
+        width: 19rem;
+        height: 0;
+        border-left: 1.5rem solid transparent;
+        border-right: 1.5rem solid transparent;
+        border-bottom: 4rem solid black;
+      }
+      .line {
+        position: relative;
+        top: -3.2rem;
+        margin-top: 1.2rem;
+        background: silver;
+        height: 0.25rem;
+      }
+      .mousepad {
+        position: relative;
+        top: -1.5rem;
+        height: 2rem;
+        width: 6rem;
+        margin-left: 8rem;
+        border-radius: 6px;
+        background: rgb(170, 170, 170);
+      }
+    }
+    .bottom {
+      height: 0.5rem;
+      width: 100%;
+      background: rgb(135, 135, 135);
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
   }
 }
