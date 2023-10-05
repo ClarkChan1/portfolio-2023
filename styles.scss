@@ -30,15 +30,15 @@ body {
       margin-bottom: 0px;
     }
     .underline {
-      width: 0%;
-      position: relative;
+      //   width: 100%;
       background-color: white;
       left: 50%;
-      animation: underline-show 1s ease-out forwards;
-      animation-delay: 6s;
+      animation: underline-show 1s ease-out 6s forwards;
+      transform-origin: center;
       border-radius: 2px;
     }
     .job {
+      margin-bottom: 0;
       text-transform: uppercase;
       font-size: 1.5rem;
       letter-spacing: 0.25rem;
@@ -48,6 +48,25 @@ body {
   }
   .skills-container {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: show-skills 1s ease-out 6s forwards;
+    .logo-container {
+      width: 5rem;
+      height: 5rem;
+      background: rgb(9, 11, 50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      .language-icon {
+        height: 3rem;
+        // background: hotpink;
+      }
+    }
   }
   .laptop-pic {
     flex: 2;
@@ -267,16 +286,25 @@ body {
 
 @keyframes underline-show {
   0% {
-    left: 50%;
+    // transform: scaleX(0);
     width: 0%;
   }
   100% {
-    left: 0%;
+    // transform: scaleX(1);
     width: 100%;
   }
 }
 
 @keyframes show-job {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-skills {
   0% {
     opacity: 0;
   }
