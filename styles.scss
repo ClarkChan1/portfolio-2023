@@ -1,3 +1,8 @@
+@font-face {
+  font-family: construction;
+  src: url("fonts/construction-font2.ttf");
+}
+
 html,
 body {
   margin: 0px;
@@ -255,6 +260,23 @@ body {
   }
 }
 
+.projects {
+  .title-container {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    .gear {
+      height: 8rem;
+      animation: rotate-gear 6s linear infinite;
+    }
+    .title {
+      text-transform: uppercase;
+      color: rgb(235, 207, 0);
+      font-weight: bold;
+    }
+  }
+}
+
 @keyframes bg-change {
   0%,
   50% {
@@ -329,6 +351,15 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes rotate-gear {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
