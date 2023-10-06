@@ -31,15 +31,17 @@ body {
   text-transform: uppercase;
   text-shadow: 0.1vw 0vw 0.15vw white;
   animation: title-change 7s 1;
-  margin-top: 20px;
+  margin-top: 1rem;
   margin-bottom: 0px;
+  font-size: 6rem;
 }
 .intro .title-container .underline {
   background-color: white;
   left: 50%;
   animation: underline-show 1s ease-out 6s forwards;
   transform-origin: center;
-  border-radius: 2px;
+  border-radius: 0.5rem;
+  height: 0.4rem;
 }
 .intro .title-container .job {
   margin-bottom: 0;
@@ -65,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 .intro .skills-container .logo-container .language-icon {
   height: 3rem;
@@ -147,7 +149,7 @@ body {
 .intro .laptop-pic .screen .content .main-container .code-files .line {
   height: 0.5rem;
   width: 2rem;
-  border-radius: 3px;
+  border-radius: 0.15rem;
   background: #c3c3c3;
 }
 .intro .laptop-pic .screen .content .main-container .code-container {
@@ -168,7 +170,7 @@ body {
 .intro .laptop-pic .screen .content .main-container .code-container .line .bar {
   height: 0.5rem;
   width: 5rem;
-  border-radius: 3px;
+  border-radius: 0.15rem;
 }
 .intro .laptop-pic .screen .content .main-container .code-container .line .moving {
   transform-origin: left;
@@ -275,6 +277,7 @@ body {
   margin-bottom: 1rem;
   text-transform: uppercase;
   color: black;
+  font-size: 6rem;
   font-weight: bold;
 }
 .projects .project-list-container {
@@ -299,23 +302,32 @@ body {
   align-items: center;
   gap: 1rem;
   background: white;
-  border-radius: 10px;
-  border-top: black 2px solid;
-  border-left: black 2px solid;
-  border-right: black 4px solid;
-  border-bottom: black 4px solid;
+  border-radius: 1rem;
+  border-top: black 0.2rem solid;
+  border-left: black 0.2rem solid;
+  border-right: black 0.4rem solid;
+  border-bottom: black 0.4rem solid;
   padding: 0.75rem;
 }
 .projects .project-list-container .project-list .project-row .name {
   flex: 1;
 }
 .projects .project-list-container .project-list .project-row .github-icon {
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
 }
 .projects .project-list-container .project-list .project-row .github-icon:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+.projects .project-list-container .project-list .project-row .tech-container {
+  display: flex;
+  gap: 0.5rem;
+  background: rgb(9, 11, 50);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.projects .project-list-container .project-list .project-row .tech-container .tech-icon {
+  height: 2rem;
 }
 .projects .project-list-container .project-list .separator {
   height: 0.1rem;
@@ -395,23 +407,11 @@ body {
   html {
     font-size: 8px;
   }
-  .title {
-    font-size: 50px;
-  }
-  .underline {
-    height: 4px;
-  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   html {
     font-size: 12px;
-  }
-  .title {
-    font-size: 75px;
-  }
-  .underline {
-    height: 6px;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -419,32 +419,17 @@ body {
   html {
     font-size: 16px;
   }
-  .title {
-    font-size: 100px;
-  }
-  .underline {
-    height: 8px;
-  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   html {
     font-size: 20px;
   }
-  .title {
-    font-size: 125px;
-  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 20px;
-  }
-  .title {
-    font-size: 125px;
-  }
-  .underline {
-    height: 8px;
   }
 }
 
