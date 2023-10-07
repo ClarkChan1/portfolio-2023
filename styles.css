@@ -261,7 +261,7 @@ body {
   flex-direction: column;
 }
 .projects .title-container {
-  font-family: construction;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,6 +335,60 @@ body {
   background: black;
 }
 
+.contact .title-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #13b1bd;
+  padding-top: 4rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+.contact .title-container .mailbox {
+  height: 13rem;
+  background: #fdd422;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+  padding-right: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+.contact .title-container .mailbox .opening {
+  height: 100%;
+  width: 8rem;
+  background: #c8a82d;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.contact .title-container .mailbox .flag-container {
+  display: flex;
+  position: absolute;
+  top: -2rem;
+  left: 10rem;
+  transform-origin: 30% 80%;
+  animation: spin-flag 6s ease-in-out infinite;
+}
+.contact .title-container .mailbox .flag-container .flagpole {
+  height: 6rem;
+  width: 2rem;
+  background: rgb(232, 28, 28);
+  left: 10rem;
+}
+.contact .title-container .mailbox .flag-container .flag {
+  height: 2rem;
+  width: 3rem;
+  background: rgb(152, 14, 14);
+  left: -1rem;
+}
+.contact .title-container .title {
+  font-size: 4rem;
+  margin: 0;
+}
+
 @keyframes bg-change {
   0%, 50% {
     background: white;
@@ -400,6 +454,14 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes spin-flag {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
   }
 }
 /* Extra small devices (phones, 600px and down) */

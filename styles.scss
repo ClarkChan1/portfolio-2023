@@ -267,7 +267,7 @@ body {
   display: flex;
   flex-direction: column;
   .title-container {
-    font-family: construction;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,6 +340,62 @@ body {
         width: 100%;
         background: black;
       }
+    }
+  }
+}
+
+.contact {
+  .title-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #13b1bd;
+    padding-top: 4rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    .mailbox {
+      height: 13rem;
+      background: #fdd422;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 2rem;
+      padding-right: 3rem;
+      text-align: center;
+      font-weight: bold;
+      .opening {
+        height: 100%;
+        width: 8rem;
+        background: #c8a82d;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+      }
+      .flag-container {
+        display: flex;
+        position: absolute;
+        top: -2rem;
+        left: 10rem;
+        transform-origin: 30% 80%;
+        animation: spin-flag 6s ease-in-out infinite;
+        .flagpole {
+          height: 6rem;
+          width: 2rem;
+          background: rgb(232, 28, 28);
+          left: 10rem;
+        }
+        .flag {
+          height: 2rem;
+          width: 3rem;
+          background: rgb(152, 14, 14);
+          left: -1rem;
+        }
+      }
+    }
+    .title {
+      font-size: 4rem;
+      margin: 0;
     }
   }
 }
@@ -427,6 +483,16 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-flag {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
   }
 }
 
