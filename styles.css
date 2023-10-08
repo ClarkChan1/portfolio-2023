@@ -49,16 +49,8 @@ h2 {
 .intro .title-container {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #fff;
   gap: 1rem;
-}
-.intro .title-container .underline {
-  background-color: white;
-  left: 50%;
-  animation: underline-show 1s ease-out 6s forwards;
-  transform-origin: center;
-  border-radius: 0.5rem;
-  height: 0.4rem;
 }
 .intro .title-container .contacts-container {
   display: flex;
@@ -67,6 +59,9 @@ h2 {
 .intro .title-container .contacts-container .contact-icon {
   height: 2rem;
   width: 2rem;
+}
+.intro .title-container .contacts-container .contact-icon .background {
+  fill: #8f00ff;
 }
 .intro .title-container .contacts-container .contact-icon:hover .background {
   fill: #fff;

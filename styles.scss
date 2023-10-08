@@ -13,6 +13,9 @@
   font-weight: 300;
 }
 
+$secondary-color: #fff;
+$primary-color: #8f00ff;
+
 html,
 body {
   margin: 0px;
@@ -58,27 +61,30 @@ h2 {
     display: flex;
     flex-direction: column;
     // align-items: center;
-    color: white;
+    color: $secondary-color;
     gap: 1rem;
-    .underline {
-      //   width: 100%;
-      background-color: white;
-      left: 50%;
-      animation: underline-show 1s ease-out 6s forwards;
-      transform-origin: center;
-      border-radius: 0.5rem;
-      height: 0.4rem;
-    }
+    // .underline {
+    //   //   width: 100%;
+    //   background-color: white;
+    //   left: 50%;
+    //   animation: underline-show 1s ease-out 6s forwards;
+    //   transform-origin: center;
+    //   border-radius: 0.5rem;
+    //   height: 0.4rem;
+    // }
     .contacts-container {
       display: flex;
       gap: 1rem;
       .contact-icon {
         height: 2rem;
         width: 2rem;
+        .background {
+          fill: $primary-color;
+        }
       }
       .contact-icon:hover {
         .background {
-          fill: #fff;
+          fill: $secondary-color;
         }
       }
     }
