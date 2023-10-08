@@ -18,12 +18,27 @@ body {
   height: 100%;
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.35rem;
+  opacity: 1;
+}
+
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
 }
 
 .intro {
@@ -35,12 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   color: white;
-}
-.intro .title-container .title {
-  text-shadow: 0.1vw 0vw 0.15vw white;
-  margin-top: 1rem;
-  margin-bottom: 0px;
-  font-size: 4rem;
+  gap: 1rem;
 }
 .intro .title-container .underline {
   background-color: white;
@@ -50,12 +60,16 @@ body {
   border-radius: 0.5rem;
   height: 0.4rem;
 }
-.intro .title-container .job {
-  margin-bottom: 0;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 0.35rem;
-  opacity: 1;
+.intro .title-container .contacts-container {
+  display: flex;
+  gap: 1rem;
+}
+.intro .title-container .contacts-container .contact-icon {
+  height: 2rem;
+  width: 2rem;
+}
+.intro .title-container .contacts-container .contact-icon:hover .background {
+  fill: #fff;
 }
 .intro .laptop-pic {
   flex: 2;
