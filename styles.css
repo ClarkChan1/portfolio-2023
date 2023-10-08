@@ -1,6 +1,16 @@
 @font-face {
-  font-family: construction;
-  src: url("fonts/construction-font2.ttf");
+  font-family: Palanquin;
+  src: url("fonts/Palanquin/Palanquin-Regular.ttf");
+}
+@font-face {
+  font-family: Palanquin;
+  src: url("fonts/Palanquin/Palanquin-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Palanquin;
+  src: url("fonts/Palanquin/Palanquin-Light.ttf");
+  font-weight: 300;
 }
 html,
 body {
@@ -9,31 +19,28 @@ body {
 }
 
 .section {
-  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .intro {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Palanquin;
+  font-weight: bold;
   background: black;
-  animation: bg-change 5s 1;
 }
 .intro .title-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: white;
 }
 .intro .title-container .title {
-  text-transform: uppercase;
   text-shadow: 0.1vw 0vw 0.15vw white;
-  animation: title-change 7s 1;
   margin-top: 1rem;
   margin-bottom: 0px;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 .intro .title-container .underline {
   background-color: white;
@@ -48,29 +55,7 @@ body {
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.35rem;
-  opacity: 0;
-  animation: show-job 1s ease-out 6s forwards;
-}
-.intro .skills-container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  opacity: 0;
-  animation: show-skills 1s ease-out 6s forwards;
-}
-.intro .skills-container .logo-container {
-  width: 5rem;
-  height: 5rem;
-  background: rgb(9, 11, 50);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-}
-.intro .skills-container .logo-container .language-icon {
-  height: 3rem;
+  opacity: 1;
 }
 .intro .laptop-pic {
   flex: 2;
@@ -100,9 +85,8 @@ body {
   left: 0px;
   right: 0px;
   background: black;
-  opacity: 1;
+  opacity: 0;
   z-index: 1;
-  animation: turn-on-laptop 1s ease-out 1;
   animation-delay: 6s;
   animation-fill-mode: forwards;
 }
@@ -255,182 +239,6 @@ body {
   border-bottom-right-radius: 1rem;
 }
 
-.projects {
-  background: #436175;
-  display: flex;
-  flex-direction: column;
-}
-.projects .title-container {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: #f8c806;
-}
-.projects .title-container .gear {
-  height: 8rem;
-  animation: rotate-gear 6s linear infinite;
-}
-.projects .title-container .title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  color: black;
-  font-size: 6rem;
-  font-weight: bold;
-}
-.projects .project-list-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.projects .project-list-container .project-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  width: 30rem;
-}
-.projects .project-list-container .project-list .project-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  background: white;
-  border-radius: 1rem;
-  border: black 0.25rem solid;
-  padding: 0.75rem;
-}
-.projects .project-list-container .project-list .project-row .name {
-  flex: 1;
-}
-.projects .project-list-container .project-list .project-row .github-icon {
-  height: 2.5rem;
-}
-.projects .project-list-container .project-list .project-row .github-icon:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-.projects .project-list-container .project-list .project-row .tech-container {
-  display: flex;
-  gap: 0.5rem;
-  background: rgb(9, 11, 50);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-.projects .project-list-container .project-list .project-row .tech-container .tech-icon {
-  height: 2rem;
-}
-.projects .project-list-container .project-list .separator {
-  height: 0.1rem;
-  width: 100%;
-  background: black;
-}
-
-.contact {
-  background: #13b1bd;
-}
-.contact .title-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 4rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-transform: uppercase;
-}
-.contact .title-container .mailbox {
-  height: 13rem;
-  width: 39rem;
-  background: #fdd422;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  display: flex;
-  align-items: center;
-  position: relative;
-  gap: 2rem;
-  padding-right: 3rem;
-  text-align: center;
-  font-weight: bold;
-  border-bottom: 1rem solid brown;
-}
-.contact .title-container .mailbox .opening {
-  height: 100%;
-  width: 8rem;
-  background: #c8a82d;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-}
-.contact .title-container .mailbox .flag-container {
-  display: flex;
-  position: absolute;
-  top: -2rem;
-  left: 10rem;
-  transform-origin: 30% 80%;
-  animation: spin-flag 6s ease-in-out infinite;
-}
-.contact .title-container .mailbox .flag-container .flagpole {
-  height: 6rem;
-  width: 2rem;
-  background: rgb(232, 28, 28);
-  left: 10rem;
-}
-.contact .title-container .mailbox .flag-container .flag {
-  height: 2rem;
-  width: 3rem;
-  background: rgb(152, 14, 14);
-  left: -1rem;
-}
-.contact .title-container .title {
-  font-size: 4rem;
-  margin: 0;
-}
-.contact .mailbox-bottom-container {
-  display: flex;
-  justify-content: flex-end;
-  width: 38rem;
-  gap: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.contact .mailbox-bottom-container .contact-info-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.contact .mailbox-bottom-container .contact-info-container .contact-info {
-  background: white;
-  border-radius: 1rem;
-  padding: 1rem;
-  border: 0.25rem solid black;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-.contact .mailbox-bottom-container .contact-info-container .contact-info * {
-  margin: 0;
-}
-.contact .mailbox-bottom-container .contact-info-container .contact-info .icon {
-  height: 3rem;
-  width: 3rem;
-}
-.contact .mailbox-bottom-container .contact-info-container .contact-info:hover {
-  background: #28c840;
-}
-.contact .mailbox-bottom-container .mailbox-pole {
-  position: relative;
-  height: 100%;
-  width: 3rem;
-  background: brown;
-}
-
 @keyframes bg-change {
   0%, 50% {
     background: white;
@@ -509,7 +317,7 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
