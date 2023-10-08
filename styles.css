@@ -303,10 +303,7 @@ body {
   gap: 1rem;
   background: white;
   border-radius: 1rem;
-  border-top: black 0.2rem solid;
-  border-left: black 0.2rem solid;
-  border-right: black 0.4rem solid;
-  border-bottom: black 0.4rem solid;
+  border: black 0.25rem solid;
   padding: 0.75rem;
 }
 .projects .project-list-container .project-list .project-row .name {
@@ -335,17 +332,20 @@ body {
   background: black;
 }
 
+.contact {
+  background: #13b1bd;
+}
 .contact .title-container {
   display: flex;
   justify-content: center;
   width: 100%;
-  background: #13b1bd;
   padding-top: 4rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
 }
 .contact .title-container .mailbox {
   height: 13rem;
+  width: 39rem;
   background: #fdd422;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
@@ -356,6 +356,7 @@ body {
   padding-right: 3rem;
   text-align: center;
   font-weight: bold;
+  border-bottom: 1rem solid brown;
 }
 .contact .title-container .mailbox .opening {
   height: 100%;
@@ -387,6 +388,47 @@ body {
 .contact .title-container .title {
   font-size: 4rem;
   margin: 0;
+}
+.contact .mailbox-bottom-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 38rem;
+  gap: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contact .mailbox-bottom-container .contact-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.contact .mailbox-bottom-container .contact-info-container .contact-info {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 0.25rem solid black;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.contact .mailbox-bottom-container .contact-info-container .contact-info * {
+  margin: 0;
+}
+.contact .mailbox-bottom-container .contact-info-container .contact-info .icon {
+  height: 3rem;
+  width: 3rem;
+}
+.contact .mailbox-bottom-container .contact-info-container .contact-info:hover {
+  background: #28c840;
+}
+.contact .mailbox-bottom-container .mailbox-pole {
+  position: relative;
+  height: 100%;
+  width: 3rem;
+  background: brown;
 }
 
 @keyframes bg-change {

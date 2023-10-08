@@ -307,10 +307,7 @@ body {
         gap: 1rem;
         background: white;
         border-radius: 1rem;
-        border-top: black 0.2rem solid;
-        border-left: black 0.2rem solid;
-        border-right: black 0.4rem solid;
-        border-bottom: black 0.4rem solid;
+        border: black 0.25rem solid;
         padding: 0.75rem;
         .year {
         }
@@ -345,16 +342,17 @@ body {
 }
 
 .contact {
+  background: #13b1bd;
   .title-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    background: #13b1bd;
     padding-top: 4rem;
     font-family: Georgia, "Times New Roman", Times, serif;
     text-transform: uppercase;
     .mailbox {
       height: 13rem;
+      width: 39rem;
       background: #fdd422;
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
@@ -365,6 +363,7 @@ body {
       padding-right: 3rem;
       text-align: center;
       font-weight: bold;
+      border-bottom: 1rem solid brown;
       .opening {
         height: 100%;
         width: 8rem;
@@ -396,6 +395,47 @@ body {
     .title {
       font-size: 4rem;
       margin: 0;
+    }
+  }
+  .mailbox-bottom-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 38rem;
+    gap: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    .contact-info-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+      .contact-info {
+        background: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        border: 0.25rem solid black;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        * {
+          margin: 0;
+        }
+        .icon {
+          height: 3rem;
+          width: 3rem;
+        }
+      }
+      .contact-info:hover {
+        background: #28c840;
+      }
+    }
+    .mailbox-pole {
+      position: relative;
+      height: 100%;
+      width: 3rem;
+      background: brown;
     }
   }
 }
