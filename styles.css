@@ -16,60 +16,76 @@ html,
 body {
   margin: 0px;
   height: 100%;
+  background: black;
 }
 
 h1,
-h2 {
+h2,
+h3,
+p {
   margin: 0;
+  font-weight: normal;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.75rem;
 }
 
 h2 {
+  font-size: 2.5rem;
   text-transform: uppercase;
-  font-size: 1.5rem;
   letter-spacing: 0.35rem;
-  opacity: 1;
 }
 
-.section {
+h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+  font-family: Palanquin;
+  gap: 2rem;
+}
+.main-section .intro {
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
-
-.intro {
-  font-family: Palanquin;
-  font-weight: bold;
-  background: black;
-}
-.intro .title-container {
+.main-section .intro .title-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   color: #fff;
+  font-weight: bold;
   gap: 1rem;
 }
-.intro .title-container .contacts-container {
+.main-section .intro .title-container .contacts-container {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
-.intro .title-container .contacts-container .contact-icon {
-  height: 2rem;
-  width: 2rem;
+.main-section .intro .title-container .contacts-container .contact-icon {
+  height: 3rem;
+  width: 3rem;
 }
-.intro .title-container .contacts-container .contact-icon .background {
+.main-section .intro .title-container .contacts-container .contact-icon .background {
   fill: #8f00ff;
 }
-.intro .title-container .contacts-container .contact-icon:hover .background {
+.main-section .intro .title-container .contacts-container .contact-icon:hover .background {
   fill: #fff;
 }
-.intro .laptop-pic {
+.main-section .intro .laptop-pic {
   flex: 2;
 }
-.intro .laptop-pic .screen {
+.main-section .intro .laptop-pic .screen {
   margin-left: 3rem;
   width: 22rem;
   height: 15rem;
@@ -79,7 +95,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.intro .laptop-pic .screen .content {
+.main-section .intro .laptop-pic .screen .content {
   height: 12rem;
   width: 20rem;
   background: #202020;
@@ -87,7 +103,7 @@ h2 {
   flex-direction: column;
   position: relative;
 }
-.intro .laptop-pic .screen .content .black-screen {
+.main-section .intro .laptop-pic .screen .content .black-screen {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -99,39 +115,39 @@ h2 {
   animation-delay: 6s;
   animation-fill-mode: forwards;
 }
-.intro .laptop-pic .screen .content .navbar {
+.main-section .intro .laptop-pic .screen .content .navbar {
   height: 1rem;
   width: 100%;
   background: rgb(75, 75, 75);
   display: flex;
   align-items: center;
 }
-.intro .laptop-pic .screen .content .navbar .red-button,
-.intro .laptop-pic .screen .content .navbar .yellow-button,
-.intro .laptop-pic .screen .content .navbar .green-button {
+.main-section .intro .laptop-pic .screen .content .navbar .red-button,
+.main-section .intro .laptop-pic .screen .content .navbar .yellow-button,
+.main-section .intro .laptop-pic .screen .content .navbar .green-button {
   height: 0.6rem;
   width: 0.6rem;
   border-radius: 50%;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
 }
-.intro .laptop-pic .screen .content .navbar .red-button {
+.main-section .intro .laptop-pic .screen .content .navbar .red-button {
   background: #ff5f57;
   margin-left: 0.5rem;
 }
-.intro .laptop-pic .screen .content .navbar .yellow-button {
+.main-section .intro .laptop-pic .screen .content .navbar .yellow-button {
   background: #febc2e;
 }
-.intro .laptop-pic .screen .content .navbar .green-button {
+.main-section .intro .laptop-pic .screen .content .navbar .green-button {
   background: #28c840;
 }
-.intro .laptop-pic .screen .content .main-container {
+.main-section .intro .laptop-pic .screen .content .main-container {
   height: 100%;
   display: flex;
   gap: 0.5rem;
   background: rgb(75, 75, 75);
 }
-.intro .laptop-pic .screen .content .main-container .code-files {
+.main-section .intro .laptop-pic .screen .content .main-container .code-files {
   flex: 1;
   background: #202020;
   display: flex;
@@ -139,13 +155,13 @@ h2 {
   gap: 0.5rem;
   padding: 0.5rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-files .line {
+.main-section .intro .laptop-pic .screen .content .main-container .code-files .line {
   height: 0.5rem;
   width: 2rem;
   border-radius: 0.15rem;
   background: #c3c3c3;
 }
-.intro .laptop-pic .screen .content .main-container .code-container {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container {
   flex: 4;
   display: flex;
   flex-direction: column;
@@ -153,68 +169,68 @@ h2 {
   background: #202020;
   padding: 0.5rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line {
   display: flex;
   gap: 0.6rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .indent {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .indent {
   width: 1rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .bar {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .bar {
   height: 0.5rem;
   width: 5rem;
   border-radius: 0.15rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .moving {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .moving {
   transform-origin: left;
   animation: move-code 3s linear infinite;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .moving-slow {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .moving-slow {
   transform-origin: left;
   animation: move-code 5s linear infinite;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .moving-fast {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .moving-fast {
   transform-origin: left;
   animation: move-code 2s linear infinite;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .short {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .short {
   width: 2rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .long {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .long {
   width: 8rem;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .yellow {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .yellow {
   background: #ebc601;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .purple {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .purple {
   background: #be82b9;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .dark-blue {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .dark-blue {
   background: #5190c4;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .blue {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .blue {
   background: #4ebcf9;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .light-blue {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .light-blue {
   background: #97d5f6;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .green {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .green {
   background: #4cc1aa;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .tan {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .tan {
   background: #dbdba9;
 }
-.intro .laptop-pic .screen .content .main-container .code-container .line .brown {
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .brown {
   background: #c88d75;
 }
-.intro .laptop-pic .motherboard {
+.main-section .intro .laptop-pic .motherboard {
   width: 22rem;
   height: 0;
   border-left: 3rem solid transparent;
   border-right: 3rem solid transparent;
   border-bottom: 8rem solid silver;
 }
-.intro .laptop-pic .motherboard .keys {
+.main-section .intro .laptop-pic .motherboard .keys {
   left: 0rem;
   top: 1rem;
   position: relative;
@@ -224,14 +240,14 @@ h2 {
   border-right: 1.5rem solid transparent;
   border-bottom: 4rem solid black;
 }
-.intro .laptop-pic .motherboard .line {
+.main-section .intro .laptop-pic .motherboard .line {
   position: relative;
   top: -3.2rem;
   margin-top: 1.2rem;
   background: silver;
   height: 0.25rem;
 }
-.intro .laptop-pic .motherboard .mousepad {
+.main-section .intro .laptop-pic .motherboard .mousepad {
   position: relative;
   top: -1.5rem;
   height: 2rem;
@@ -240,12 +256,51 @@ h2 {
   border-radius: 6px;
   background: rgb(170, 170, 170);
 }
-.intro .laptop-pic .bottom {
+.main-section .intro .laptop-pic .bottom {
   height: 0.5rem;
   width: 100%;
   background: rgb(135, 135, 135);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+.main-section .work {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main-section .work .work-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-section .work .work-entry .title {
+  color: #a42cff;
+  font-weight: bold;
+}
+.main-section .work .work-entry .company-and-time-container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-section .work .work-entry .company-and-time-container .time-worked {
+  color: rgba(198, 198, 198, 0.7294117647);
+}
+.main-section .work .work-entry .technology-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.main-section .work .work-entry .technology-container * {
+  background: #5f00a8;
+  border-radius: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.main-section .work .work-entry .job-description {
+  color: #c6c6c6;
 }
 
 @keyframes bg-change {
@@ -328,29 +383,39 @@ h2 {
   html {
     font-size: 6px;
   }
+  .main-section {
+    flex-direction: column;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   html {
-    font-size: 12px;
+    font-size: 8px;
+  }
+  .main-section {
+    flex-direction: column;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 10px;
+  }
+  .main-section {
+    flex-direction: column;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 20px;
+    font-size: 14px;
   }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 20px;
+  .main-section {
+    flex-direction: row;
+  }
+  .main-section .intro {
+    flex-direction: column;
+    gap: 4rem;
   }
 }
 
