@@ -131,14 +131,14 @@ p {
   margin-right: 0.1rem;
 }
 .main-section .intro .laptop-pic .screen .content .navbar .red-button {
-  background: #ff5f57;
+  background: #8f00ff;
   margin-left: 0.5rem;
 }
 .main-section .intro .laptop-pic .screen .content .navbar .yellow-button {
-  background: #febc2e;
+  background: #c6c6c6;
 }
 .main-section .intro .laptop-pic .screen .content .navbar .green-button {
-  background: #28c840;
+  background: #fff;
 }
 .main-section .intro .laptop-pic .screen .content .main-container {
   height: 100%;
@@ -198,29 +198,23 @@ p {
 .main-section .intro .laptop-pic .screen .content .main-container .code-container .line .long {
   width: 8rem;
 }
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .yellow {
-  background: #ebc601;
-}
 .main-section .intro .laptop-pic .screen .content .main-container .code-container .line .purple {
-  background: #be82b9;
+  background: #8f00ff;
 }
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .dark-blue {
-  background: #5190c4;
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .light-purple {
+  background: #a42cff;
 }
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .blue {
-  background: #4ebcf9;
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .dark-purple {
+  background: #5f00a8;
 }
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .light-blue {
-  background: #97d5f6;
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .white {
+  background: #fff;
 }
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .green {
-  background: #4cc1aa;
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .grey {
+  background: #c6c6c6;
 }
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .tan {
-  background: #dbdba9;
-}
-.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .brown {
-  background: #c88d75;
+.main-section .intro .laptop-pic .screen .content .main-container .code-container .line .dark-grey {
+  background: rgba(198, 198, 198, 0.7294117647);
 }
 .main-section .intro .laptop-pic .motherboard {
   width: 22rem;

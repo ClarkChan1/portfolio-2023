@@ -137,14 +137,14 @@ p {
               margin-right: 0.1rem;
             }
             .red-button {
-              background: #ff5f57;
+              background: $primary-color;
               margin-left: 0.5rem;
             }
             .yellow-button {
-              background: #febc2e;
+              background: $dark-secondary-color;
             }
             .green-button {
-              background: #28c840;
+              background: $secondary-color;
             }
           }
           .main-container {
@@ -203,30 +203,23 @@ p {
                 .long {
                   width: 8rem;
                 }
-                .yellow {
-                  background: #ebc601;
-                }
-
                 .purple {
-                  background: #be82b9;
+                  background: $primary-color;
                 }
-                .dark-blue {
-                  background: #5190c4;
+                .light-purple {
+                  background: $light-primary-color;
                 }
-                .blue {
-                  background: #4ebcf9;
+                .dark-purple {
+                  background: $dark-primary-color;
                 }
-                .light-blue {
-                  background: #97d5f6;
+                .white {
+                  background: $secondary-color;
                 }
-                .green {
-                  background: #4cc1aa;
+                .grey {
+                  background: $dark-secondary-color;
                 }
-                .tan {
-                  background: #dbdba9;
-                }
-                .brown {
-                  background: #c88d75;
+                .dark-grey {
+                  background: $dark-secondary-color2;
                 }
               }
             }
