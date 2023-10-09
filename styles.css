@@ -69,7 +69,7 @@ p {
 }
 .main-section .intro .title-container .contacts-container {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .main-section .intro .title-container .contacts-container .contact-icon {
   height: 3rem;
@@ -256,35 +256,46 @@ p {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-.main-section .work {
+.main-section .main-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.main-section .main-content-container .work,
+.main-section .main-content-container .projects {
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.main-section .work .work-entry {
+.main-section .main-content-container .work .entry,
+.main-section .main-content-container .projects .entry {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
-.main-section .work .work-entry .title {
+.main-section .main-content-container .work .entry .title,
+.main-section .main-content-container .projects .entry .title {
   color: #a42cff;
   font-weight: bold;
 }
-.main-section .work .work-entry .company-and-time-container {
-  display: flex;
-  justify-content: space-between;
+.main-section .main-content-container .work .entry .description,
+.main-section .main-content-container .projects .entry .description {
+  color: #c6c6c6;
 }
-.main-section .work .work-entry .company-and-time-container .time-worked {
-  color: rgba(198, 198, 198, 0.7294117647);
-}
-.main-section .work .work-entry .technology-container {
+.main-section .main-content-container .work .entry .technology-container,
+.main-section .main-content-container .projects .entry .technology-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 1rem;
 }
-.main-section .work .work-entry .technology-container * {
+.main-section .main-content-container .work .entry .technology-container *,
+.main-section .main-content-container .projects .entry .technology-container * {
   background: #5f00a8;
   border-radius: 1rem;
   padding-top: 0.5rem;
@@ -292,8 +303,26 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.main-section .work .work-entry .job-description {
-  color: #c6c6c6;
+.main-section .main-content-container .work .company-and-time-container {
+  display: flex;
+  gap: 2rem;
+}
+.main-section .main-content-container .work .company-and-time-container .time-worked {
+  color: rgba(198, 198, 198, 0.7294117647);
+}
+.main-section .main-content-container .projects .title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.main-section .main-content-container .projects .title-container .arrow-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: #8f00ff;
+}
+.main-section .main-content-container .projects .time-worked {
+  color: rgba(198, 198, 198, 0.7294117647);
 }
 
 @keyframes bg-change {
@@ -408,7 +437,22 @@ p {
   }
   .main-section .intro {
     flex-direction: column;
+    justify-content: start;
     gap: 4rem;
+    position: fixed;
+    left: 5rem;
+  }
+  .main-section .main-content-container {
+    margin-left: 33rem;
+  }
+  .main-section .main-content-container .entry:hover {
+    background: rgba(95, 0, 168, 0.1725490196);
+  }
+  .main-section .main-content-container .entry:hover .arrow-icon {
+    transform: scale(1.25);
+  }
+  .main-section .main-content-container .projects .entry:hover {
+    cursor: pointer;
   }
 }
 

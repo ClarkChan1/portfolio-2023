@@ -16,6 +16,11 @@
 $primary-color: #8f00ff;
 $light-primary-color: #a42cff;
 $dark-primary-color: #5f00a8;
+$primary-bg-color: #5f00a82c;
+// blue color scheme
+// $primary-color: #0077ff;
+// $light-primary-color: #2c96ff;
+// $dark-primary-color: #2d00a8;
 $secondary-color: #fff;
 $dark-secondary-color: #c6c6c6;
 $dark-secondary-color2: #c6c6c6ba;
@@ -76,7 +81,7 @@ p {
       gap: 1rem;
       .contacts-container {
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
         .contact-icon {
           height: 3rem;
           width: 3rem;
@@ -268,44 +273,72 @@ p {
       }
     }
   }
-  .work {
-    color: $secondary-color;
+  .main-content-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    .work-entry {
+    gap: 4rem;
+    .work,
+    .projects {
+      color: $secondary-color;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      .title {
-        color: $light-primary-color;
-        font-weight: bold;
+      gap: 2rem;
+      .entry {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        .title {
+          color: $light-primary-color;
+          font-weight: bold;
+        }
+        .description {
+          color: $dark-secondary-color;
+        }
+        .technology-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          margin-top: 1rem;
+          * {
+            background: $dark-primary-color;
+            border-radius: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
       }
+    }
+    .work {
       .company-and-time-container {
         display: flex;
-        justify-content: space-between;
+        gap: 2rem;
         .company {
         }
         .time-worked {
           color: $dark-secondary-color2;
         }
       }
-      .technology-container {
+    }
+    .projects {
+      .title-container {
         display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin-top: 1rem;
-        * {
-          background: $dark-primary-color;
-          border-radius: 1rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          padding-left: 1rem;
-          padding-right: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        .arrow-icon {
+          width: 2.5rem;
+          height: 2.5rem;
+          stroke: $primary-color;
         }
       }
-      .job-description {
-        color: $dark-secondary-color;
+      .time-worked {
+        color: $dark-secondary-color2;
       }
     }
   }
@@ -440,8 +473,25 @@ p {
     flex-direction: row;
     .intro {
       flex-direction: column;
+      justify-content: start;
       gap: 4rem;
+      position: fixed;
+      left: 5rem;
       .title-container {
+      }
+    }
+    .main-content-container {
+      margin-left: 33rem;
+      .entry:hover {
+        background: $primary-bg-color;
+        .arrow-icon {
+          transform: scale(1.25);
+        }
+      }
+      .projects {
+        .entry:hover {
+          cursor: pointer;
+        }
       }
     }
   }
