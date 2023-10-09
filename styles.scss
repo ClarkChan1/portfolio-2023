@@ -40,12 +40,12 @@ h1 {
   font-size: 3.75rem;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
 }
@@ -65,11 +65,10 @@ p {
   .intro {
     background: $background-color;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     //   animation: bg-change 5s 1;
     .title-container {
-      flex: 1;
       display: flex;
       flex-direction: column;
       color: $secondary-color;
@@ -449,6 +448,8 @@ p {
     .intro {
       flex-direction: column;
       gap: 4rem;
+      .title-container {
+      }
     }
   }
 }
