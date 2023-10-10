@@ -28,23 +28,23 @@ p {
 }
 
 h1 {
-  font-size: 3.75rem;
+  font-size: 26px;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .main-section {
@@ -52,7 +52,7 @@ p {
   justify-content: center;
   padding: 5rem;
   font-family: Palanquin;
-  gap: 2rem;
+  gap: 10rem;
 }
 .main-section .intro {
   background: black;
@@ -202,7 +202,7 @@ p {
   background: #8f00ff;
 }
 .main-section .intro .laptop-pic .screen .content .main-container .code-container .line .light-purple {
-  background: #a42cff;
+  background: #b34fff;
 }
 .main-section .intro .laptop-pic .screen .content .main-container .code-container .line .dark-purple {
   background: #5f00a8;
@@ -280,7 +280,7 @@ p {
 }
 .main-section .main-content-container .work .entry .title,
 .main-section .main-content-container .projects .entry .title {
-  color: #a42cff;
+  color: #b34fff;
   font-weight: bold;
 }
 .main-section .main-content-container .work .entry .description,
@@ -319,7 +319,7 @@ p {
 .main-section .main-content-container .projects .title-container .arrow-icon {
   width: 2.5rem;
   height: 2.5rem;
-  stroke: #8f00ff;
+  stroke: #b34fff;
 }
 .main-section .main-content-container .projects .time-worked {
   color: rgba(198, 198, 198, 0.7294117647);
@@ -417,6 +417,18 @@ p {
   .main-section {
     flex-direction: column;
   }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -431,6 +443,15 @@ p {
 @media only screen and (min-width: 992px) {
   html {
     font-size: 14px;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
   }
   .main-section {
     flex-direction: row;

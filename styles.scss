@@ -14,7 +14,7 @@
 }
 
 $primary-color: #8f00ff;
-$light-primary-color: #a42cff;
+$light-primary-color: #b34fff;
 $dark-primary-color: #5f00a8;
 $primary-bg-color: #5f00a82c;
 // blue color scheme
@@ -42,20 +42,20 @@ p {
 }
 
 h1 {
-  font-size: 3.75rem;
+  font-size: 26px;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
 }
 p {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .main-section {
@@ -65,7 +65,7 @@ p {
   justify-content: center;
   padding: 5rem;
   font-family: Palanquin;
-  gap: 2rem;
+  gap: 10rem;
 
   .intro {
     background: $background-color;
@@ -334,7 +334,7 @@ p {
         .arrow-icon {
           width: 2.5rem;
           height: 2.5rem;
-          stroke: $primary-color;
+          stroke: $light-primary-color;
         }
       }
       .time-worked {
@@ -454,6 +454,18 @@ p {
   .main-section {
     flex-direction: column;
   }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -469,6 +481,16 @@ p {
   html {
     font-size: 14px;
   }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+
   .main-section {
     flex-direction: row;
     .intro {
