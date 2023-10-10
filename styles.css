@@ -292,7 +292,7 @@ p {
 }
 .main-section .main-content-container .work .entry .description,
 .main-section .main-content-container .projects .entry .description {
-  color: #c6c6c6;
+  color: rgb(215, 215, 215);
 }
 .main-section .main-content-container .work .entry .technology-container,
 .main-section .main-content-container .projects .entry .technology-container {
@@ -312,6 +312,7 @@ p {
 }
 .main-section .main-content-container .work .company-and-time-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .main-section .main-content-container .work .company-and-time-container .time-worked {

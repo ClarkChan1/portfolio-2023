@@ -22,6 +22,7 @@ $primary-bg-color: #5f00a82c;
 // $light-primary-color: #2c96ff;
 // $dark-primary-color: #2d00a8;
 $secondary-color: #fff;
+$slightly-dark-secondary-color: rgb(215, 215, 215);
 $dark-secondary-color: #c6c6c6;
 $dark-secondary-color2: #c6c6c6ba;
 $background-color: black;
@@ -302,7 +303,7 @@ p {
           font-weight: bold;
         }
         .description {
-          color: $dark-secondary-color;
+          color: $slightly-dark-secondary-color;
         }
         .technology-container {
           display: flex;
@@ -323,6 +324,7 @@ p {
     .work {
       .company-and-time-container {
         display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
         .company {
         }
