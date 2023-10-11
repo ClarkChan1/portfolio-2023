@@ -66,9 +66,7 @@ p {
 }
 
 .main-section {
-  //   height: 100%;
   display: flex;
-  //   flex-direction: column;
   justify-content: center;
   padding: 5rem;
   font-family: Palanquin;
@@ -79,7 +77,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //   animation: bg-change 5s 1;
     .title-container {
       display: flex;
       flex-direction: column;
